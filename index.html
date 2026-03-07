@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Skull Animation</title>
+
+<style>
+
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#0b0b0b;
+  font-family:Arial, sans-serif;
+  overflow:hidden;
+}
+
+.skull-container{
+  position:relative;
+  width:400px;
+  height:300px;
+}
+
+.inner-content{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  color:white;
+  z-index:2;
+}
+
+.inner-content h2{
+  letter-spacing:3px;
+  font-size:28px;
+}
+
+.inner-content p{
+  font-size:14px;
+  opacity:0.8;
+}
+
+.skull-half{
+  position:absolute;
+  width:50%;
+  height:100%;
+  background:linear-gradient(135deg,#ffffff,#aaaaaa);
+  top:0;
+  transition:1.5s;
+}
+
+.left{
+  left:0;
+  border-top-left-radius:200px;
+  border-bottom-left-radius:200px;
+}
+
+.right{
+  right:0;
+  border-top-right-radius:200px;
+  border-bottom-right-radius:200px;
+}
+
+.skull-container:hover .left{
+  transform:translateX(-120%);
+}
+
+.skull-container:hover .right{
+  transform:translateX(120%);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="skull-container">
+
+  <div class="inner-content">
+    <h2>THE MIND UNLOCKED</h2>
+    <p>Explore the depths of the digital psyche.</p>
+  </div>
+
+  <div class="skull-half left"></div>
+  <div class="skull-half right"></div>
+
+</div>
+
+</body>
+</html>
