@@ -1,17 +1,21 @@
-function simulateAI() {
-    const resultDiv = document.getElementById('ai-result');
-    resultDiv.innerHTML = "<p>Analyzing aerodynamics... Calculating wheel offset...</p>";
-    
-    setTimeout(() => {
-        resultDiv.innerHTML = 
-            <div style="border: 1px solid green; padding: 10px; margin-top: 20px;">
-                <h4>AI Recommendations:</h4>
-                <ul>
-                    <li>Lower suspension by 20mm</li>
-                    <li>Matte Stealth Wrap</li>
-                    <li>Vossen Forged Wheels</li>
-                </ul>
-            </div>
-        ;
-    }, 2000);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Car Analysis</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>AI Car Performance Analyzer</h2>
+
+<button onclick="simulateAI()">Run AI Analysis</button>
+
+<div id="ai-result"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
