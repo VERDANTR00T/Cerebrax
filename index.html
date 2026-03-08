@@ -1,93 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Skull Animation</title>
-
-<style>
-
-body{
-  margin:0;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:#0b0b0b;
-  font-family:Arial, sans-serif;
-  overflow:hidden;
-}
-
-.skull-container{
-  position:relative;
-  width:400px;
-  height:300px;
-}
-
-.inner-content{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  text-align:center;
-  color:white;
-  z-index:2;
-}
-
-.inner-content h2{
-  letter-spacing:3px;
-  font-size:28px;
-}
-
-.inner-content p{
-  font-size:14px;
-  opacity:0.8;
-}
-
-.skull-half{
-  position:absolute;
-  width:50%;
-  height:100%;
-  background:linear-gradient(135deg,#ffffff,#aaaaaa);
-  top:0;
-  transition:1.5s;
-}
-
-.left{
-  left:0;
-  border-top-left-radius:200px;
-  border-bottom-left-radius:200px;
-}
-
-.right{
-  right:0;
-  border-top-right-radius:200px;
-  border-bottom-right-radius:200px;
-}
-
-.skull-container:hover .left{
-  transform:translateX(-120%);
-}
-
-.skull-container:hover .right{
-  transform:translateX(120%);
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOD-AI | Custom Car Lab</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="skull-container">
+    <nav>
+        <div class="logo">MOD-<span>AI</span></div>
+        <ul>
+            <li><a href="#gallery">Showcase</a></li>
+            <li><a href="#ai-tools">AI Customizer</a></li>
+            <li><a href="#specs">Specs</a></li>
+        </ul>
+    </nav>
 
-  <div class="inner-content">
-    <h2>THE MIND UNLOCKED</h2>
-    <p>Explore the depths of the digital psyche.</p>
-  </div>
+    <header>
+        <h1>UNLEASH THE <span>BEAST</span></h1>
+        <p>Next-gen car modifications powered by Artificial Intelligence.</p>
+    </header>
 
-  <div class="skull-half left"></div>
-  <div class="skull-half right"></div>
+    <section id="gallery">
+        <h2>Modified Excellence</h2>
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1603584173870-7f3ca99a832a?q=80&w=1000" alt="Modified Sports Car">
+            <div class="info">
+                <h3>Nissan GTR "Midnight"</h3>
+                <p>Widebody kit, Stage 2 Turbo, Carbon Fiber Hood.</p>
+            </div>
+        </div>
+    </section>
 
-</div>
+    <section id="ai-tools">
+        <h2>AI Modification Lab</h2>
+        <div class="tool-container">
+            <p>Upload your car photo and let our AI suggest the best aero-kits and paint jobs.</p>
+            <input type="file" id="car-upload">
+            <button onclick="simulateAI()">Run AI Analysis</button>
+            <div id="ai-result"></div>
+        </div>
+    </section>
 
 </body>
 </html>
