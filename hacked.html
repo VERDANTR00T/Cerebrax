@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System Access</title>
+
+<style>
+body {
+  margin: 0;
+  background: black;
+  color: #00ff00;
+  font-family: monospace;
+  overflow: hidden;
+}
+
+.terminal {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  background: #00ff00;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="terminal" id="terminal"></div>
+
+<script>
+const lines = [
+  "Initializing secure connection...",
+  "Bypassing firewall...",
+  "Accessing encrypted data...",
+  "Decrypting files...",
+  "Injecting payload...",
+  "Access granted ✔",
+  "Downloading private data...",
+  "Tracking device location...",
+  "Camera access enabled...",
+  "System fully compromised."
+];
+
+let i = 0;
+let j = 0;
+const speed = 40;
+const terminal = document.getElementById("terminal");
+
+function typeLine() {
+  if (i < lines.length) {
+    if (j < lines[i].length) {
+      terminal.innerHTML += lines[i].charAt(j);
+      j++;
+      setTimeout(typeLine, speed);
+    } else {
+      terminal.innerHTML += "<br>";
+      i++;
+      j = 0;
+      setTimeout(typeLine, 300);
+    }
+  } else {
+    terminal.innerHTML += "<br>_ <span class='cursor'></span>";
+  }
+}
+
+typeLine();
+</script>
+
+</body>
+</html>
